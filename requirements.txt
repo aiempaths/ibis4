@@ -1,0 +1,8 @@
+numpy
+scipy
+pandas
+scikit-learn
+torch
+pytorch-lightning
+pennylane
+requests
