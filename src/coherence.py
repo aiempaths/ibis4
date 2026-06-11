@@ -123,9 +123,11 @@ class UnifiedPhaseAnalyzer:
             return 0.0
 
         off_diag = similarity[~np.eye(similarity.shape[0], dtype=bool)]
-        hist, _ = np.histogram(off_diag, bins=self.hist_bins, range=(-1.0, 1.0), density=True)
-        prob = hist.astype(float)
-        prob = prob[prob > 0.0]
+        hist, _ = np.histogram(off_diag, bins=self.hist_bins,
+                       range=(-1.0, 1.0), density=False)
+        prob = hist.astype(float) + 1e-6   # add noise floor before filtering
+        prob = prob / prob.sum()            # normalize to true probability
+        prob = prob[prob > 1e-7]
         if prob.size == 0:
             return 0.0
 

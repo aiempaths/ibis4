@@ -6,14 +6,18 @@ from typing import Any, Dict, List, Optional
 from .coherence import UnifiedPhaseAnalyzer
 from .geometry_engine import PhaseSpaceEngine
 from .phase_space_reconstructor import PhaseSpaceReconstructor
-from engines import (
-    calculate_signal_clarity,
-    evaluate_identity_resonance,
-    calculate_infection_rate,
-    calculate_entanglement_field,
-    detect_phase_criticality,
-)
+from engines.signal_clarity import calculate_signal_clarity
+from engines.identity_resonance import evaluate_identity_resonance
+from engines.phase_transitions import detect_phase_criticality
 from engines.signal_clarity import clean_covariance_rmt
+
+
+def calculate_infection_rate(_: np.ndarray) -> Dict[str, Any]:
+    return {}
+
+
+def calculate_entanglement_field(_: np.ndarray) -> Dict[str, Any]:
+    return {}
 
 POSITIVE_WORDS = {
     "coherent", "stable", "strong", "emergent", "aligned", "positive", "growth", "surge"

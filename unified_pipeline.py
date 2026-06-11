@@ -81,7 +81,7 @@ def main(args: Optional[Any] = None) -> int:
     parsed = parser.parse_args(args=args)
 
     np.random.seed(parsed.seed)
-    adapter = DomainAdapter()
+    adapter = DomainAdapter(use_takens=True)
     report: Dict[str, Any] = {"version": "1.0", "reports": {}}
 
     try:

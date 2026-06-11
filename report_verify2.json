@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "reports": {
+    "market_ETH": {
+      "source": "market",
+      "use_takens": true,
+      "phase_analysis": {
+        "alpha": 0.25,
+        "beta": 0.08,
+        "c": 0.4947,
+        "r": 0.6179,
+        "kuramoto": 1.0,
+        "plv": 0.9999,
+        "pli": 0.045,
+        "H": 0.0,
+        "C": 0.5871,
+        "gamma": 0.1,
+        "geometric_score": 0.6085,
+        "C_enhanced": 0.5893,
+        "compactness": 1.9173,
+        "recurrence_rate": 0.9153,
+        "divergence_proxy": 0.7067
+      },
+      "geometric_features": {
+        "system_radius": 202.12572761766697,
+        "compactness": 1.9172952713925733,
+        "recurrence_rate": 0.915275994865153,
+        "divergence_proxy": 0.7067344902220511,
+        "embedding_delay": 4.0,
+        "embedding_dimension": 2.0
+      },
+      "rmt_cleaning": {
+        "mp_threshold": 0.0,
+        "q_ratio": 169.0,
+        "num_signal_eigenvalues": 1
+      },
+      "telemetry": {
+        "signal_clarity": 0.9879,
+        "identity_resonance": {
+          "resonance_score": 0.5031847601241893,
+          "regime_status": "NEUTRAL_STANDBY"
+        },
+        "narrative_infection": {},
+        "structural_entanglement": {},
+        "phase_transition": {
+          "criticality_index": 0.01514110372670813,
+          "approaching_criticality": false,
+          "system_regime": "STABLE_PERCOLATION"
+        }
+      },
+      "coherence": {
+        "C_score": 0.5893,
+        "regime": "TRANSITION",
+        "geometry_state": "OPEN",
+        "c_component": 0.4947,
+        "r_component": 0.6179,
+        "entropy_component": 0.0
+      }
+    }
+  }
+}
